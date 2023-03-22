@@ -8,7 +8,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 export default function generateMarkup(galleryItems) { 
   return galleryItems 
     .map(({ preview, original, description }) => ` 
-      <li class="gallery__item"> 
+      <div class="gallery__item"> 
         <a class="gallery__link" href="${original}"> 
           <img 
             class="gallery__image" 
@@ -16,7 +16,7 @@ export default function generateMarkup(galleryItems) {
             alt="${description}" 
           /> 
         </a> 
-      </li> 
+      </div> 
     `) 
     .join(''); 
 } 
